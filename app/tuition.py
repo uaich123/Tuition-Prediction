@@ -11,8 +11,8 @@ st.write("Also, make sure to type in the full name of the program; for example, 
 st.write("Write down the university exactly as it appears in the list below. For example," \
 "write Georgia Tech instead of Georgia Tech University or Georgia Institute of Technology.")
 
-st.write("""Please note that this tool covers a total of 622 universities, so your university might not " \
-"be listed here. \
+st.write("""Please note that this tool covers a total of 622 universities, so your university might not \
+be listed here. \
 
 \
 
@@ -25,6 +25,7 @@ if text_search:
     matches = df[mask]
     if not matches.empty:
         matches = matches['University'].unique()
+        matches = pd.DataFrame(matches, columns=['University'])
         st.dataframe(matches, hide_index=True)
     else:
         st.warning("No university found.")
