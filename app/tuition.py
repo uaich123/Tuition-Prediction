@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.markdown("Enter your program details to estimate the tuition fee.")
+st.markdown("Enter your program details to estimate the tuition fee in the left sidebar.")
 st.write("If there is a huge disrepency between the predicted tuition and the actual tuition, then make sure that "
 "you have entered all the data correctly. For example, Harvard University is in the U.S., not U.K. " \
 "and the correct city spelling is 'Cambridge' not 'Cambrige'. ")
