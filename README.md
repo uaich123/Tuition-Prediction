@@ -19,7 +19,7 @@ This Streamlit-powered app uses a machine learning model trained on internationa
 - Predict tuition fees for 600+ universities
 - Search and filter supported institutions
 - Inputs include country, city, university, degree level, duration, rent, insurance, and more
-- View all supported universities with location details
+- View all supported universities. Not case sensitive.
 
 ---
 
