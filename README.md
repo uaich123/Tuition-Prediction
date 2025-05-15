@@ -8,7 +8,7 @@ This Streamlit-powered app uses a machine learning model trained on internationa
 
 ## The app
 
-[The Tuition Prediction App](https://your-streamlit-cloud-link.streamlit.app)
+[The Tuition Prediction App](https://tuition-prediction-ua123.streamlit.app)
 
 > Powered by machine learning. Results are estimates and may vary.
 
