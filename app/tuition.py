@@ -12,7 +12,7 @@ st.write("Write down the university exactly as it appears in the list below. For
 "write Georgia Tech instead of Georgia Tech University or Georgia Institute of Technology.")
 
 st.write("""Please note that this tool covers a total of 622 universities, so your university might not " \
-"be listed here." \
+"be listed here. \
 
 \
 
@@ -24,12 +24,8 @@ if text_search:
     mask = df['University'].str.contains(text_search, case=False)
     matches = df[mask]
     if not matches.empty:
-        matches.drop_duplicates(inplace=True)
-        keep_cols = ['University', 'City', 'Country']
-        goodbye_cols = [col for col in df.columns if col not in keep_cols]
-        matches.drop(columns = goodbye_cols, inplace=True)
-        matches = pd.DataFrame({"University":matches["University"], "City": matches["City"], "Country": matches["Country"]})
-        st.dataframe(matches.drop_duplicates(), hide_index=True)
+        matches = matches['University'].unique()
+        st.dataframe(matches, hide_index=True)
     else:
         st.warning("No university found.")
 
